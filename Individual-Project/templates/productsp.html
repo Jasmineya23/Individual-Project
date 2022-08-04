@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		 {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.listing-section, .cart-section {
+  width: 100%;
+  float: left;
+  padding: 1%;
+  border-bottom: 0.01em solid #dddbdb;
+}
+
+.product {
+  float: left;
+  width: 23%;
+  border-radius: 2%;
+  margin: 1%;
+}
+
+.product:hover {
+  box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);  
+  -moz-box-shadow:    1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);
+}
+
+.image-box {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2% 2% 0 0;
+}
+
+.images {
+  height: 15em;
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
+  border-radius: 2% 2% 0 0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+
+.images:hover {
+  transform: scale(1.2);
+  overflow: hidden;
+  border-radius: 2%;
+}
+
+/* IMAGES */
+#image-1 {background-image: url("https://images.trophydepot.com/QC/images/products/FDGT-PNK.JPG");}
+
+#image-2 {background-image: url("https://myfirstsale.com/wp-content/uploads/2020/11/pink-slime.jpg")}
+
+#image-3 {background-image: url("https://www.toyhouse.co.il/images/itempics/385052_27102020170251.jpg")}
+
+#image-4 {background-image: url("https://shopopo.co.il/wp-content/uploads/2020/12/1-75.jpg")}
+
+#image-5 {background-image: url("https://www.mikmak.co.il/images/faq/dolls/zoe.jpg")}
+
+#image-6 {background-image: url("https://candyshop.co.il/wp-content/uploads/2020/05/DSC_3562-scaled.jpg")}
+
+#image-7 {background-image: url("https://d3m9l0v76dty0.cloudfront.net/system/photos/9258355/large/8788c45a41ff60283203d8a56923414c.jpg")}
+
+#image-8 {background-image: url("https://www.alterbooks.co.il/wp-content/uploads/2019/07/19015_-copy.png")}
+
+#image-9 {background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX6k1WUM0oOWPquXDNfWsdbK2hOpMGpi0cbhye5UgjOeKyK7X4EHbDI_kmuknS__afVCM&usqp=CAU")}
+
+#image-10 {background-image: url("https://dadapark.co.il/wp-content/uploads/2019/01/White-Unicorn-Disc-On-Key-Plastic-004-800x800.jpg")}
+
+.text-box {
+  width: 100%;
+  float: left;
+  border: 0.01em solid #dddbdb;
+  border-radius: 0 0 2% 2%;
+  padding: 1em;
+}
+
+h2, h3 {
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 0.2em auto;
+}
+
+.item, .price {
+  clear: left;
+  width: 100%;
+  text-align: center;
+}
+
+.price {
+  color: Grey;
+}
+
+.description, label, button, input {
+  float: left;
+  clear: left;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  margin: 0.2em auto;
+}
+
+input:focus {
+  outline-color: #F6D3ED;
+}
+
+label {
+  width: 60%;
+}
+
+.text-box input {
+  width: 15%;
+  clear: none;
+}
+
+.text-box button {
+  margin-top: 1em;
+}
+
+button {
+  padding: 2%;
+  background-color: #F6D3ED;
+  border: none;
+  border-radius: 2%;
+}
+
+button:hover {
+  bottom: 0.1em;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  bottom: 0;
+  background-color: #F6D3ED;
+}
+
+.table-heading, .table-content {
+  width: 75%;
+  margin: 1% 12.25%;
+  float: left;
+  background-color: #F6D3ED;
+}
+
+.table-heading h2 {
+  padding: 1%;
+  margin: 0;
+  text-align: center;
+}
+
+.cart-product {
+  width: 50%;
+  float: left;
+}
+
+.cart-price {
+  width: 15%;
+  float: left;
+}
+
+.cart-quantity {
+  width: 10%;
+  float: left;
+}
+
+.cart-total {
+  width: 25%;
+  float: left;
+}
+
+.cart-image-box {
+  width: 20%;
+  overflow: hidden;
+  border-radius: 2%;
+  float: left;
+  margin: 1%;
+}
+
+.cart-images {
+  height: 7em;
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat;
+}
+
+.cart-item {
+  width: 20%;
+  float: left;
+  margin: 3.2em 1%;
+  text-align: center;
+}
+.cart-description {
+  width: 53%;
+  float: left;
+  margin: 3.2em 1%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+}
+
+.cart-price h3, .cart-total h3 {
+  margin: 3.2em 5% 3.2em 20%;
+  width: 60%;
+}
+
+.cart-quantity input {
+  margin: 3.2em 1%;
+  border: none;
+}
+
+.remove {
+  width: 10%;
+  margin: 1px;
+  float: right;
+  clear: right;
+}
+
+.coupon {
+  width: 20%;
+  background-color: #F6D3ED;
+  margin: 1% 1% 1% 12.25%;
+  float: left;
+  height: 6em;
+}
+
+.coupon input {
+  width: 60%;
+  border: none;
+  margin: 12.75% 5%;
+  padding: 1%;
+}
+
+.coupon button {
+  width: 25%;
+  float: left;
+  clear: right;
+  margin: 12% 5% 12% 0;
+}
+
+.keep-shopping {
+  width: 15%;
+  height: 6em;
+  float: left;
+  margin: 1% auto;
+  padding: 1%;
+  background-color:#F6D3ED;
+}
+
+.keep-shopping button {
+  text-transform: uppercase;
+  margin: 12% auto;
+  
+}
+
+.checkout {
+  width: 37.25%;
+  margin: 1% 12.75% 1% 1%;
+  float: right;
+  background-color: #F4DFEE;
+  height: 6em;
+}
+
+.checkout button {
+  width: 30%;
+  clear: none;
+  margin: 5.4% 0 5.4% 5.5%;
+  text-transform: uppercase;
+}
+
+.final-cart-total {
+  width: 15%;
+  float: right;
+  margin: 7%;
+  background-color: White;
+}
+
+.final-cart-total h3 {
+  color: Black;
+}  
+	</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<a href="login">login</a>
+<a href="signup">signup</a>
+<div class="topnav">
+    <a class="active" href="/productsp">products</a>
+  <a href="/aboutus">about us</a>
+  <a href="/signin">sign in</a>
+  <a href="/signup">sign up</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<div class="listing-section">
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-1"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">spinner</h2>
+      <h3 class="price">3$</h3>
+      <p class="description">A pink nostalgic spinner</p>
+      <label for="item-1-quantity">Quantity:</label>
+      <input type="text" name="item-1-quantity" id="item-1-quantity" value="1">
+      <button type="button" name="item-1-button" id="item-1-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-2"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">slime</h2>
+      <h3 class="price">5$</h3>
+      <p class="description">A pink fluffy nostalgic slime</p>
+      <label for="item-2-quantity">Quantity:</label>
+      <input type="text" name="item-2-quantity" id="item-2-quantity" value="1">
+      <button type="button" name="item-2-button" id="item-2-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-3"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">gomilum</h2>
+      <h3 class="price">7$</h3>
+      <p class="description">A box of nostalgic gomilum</p>
+      <label for="item-3-quantity">Quantity:</label>
+      <input type="text" name="item-3-quantity" id="item-3-quantity" value="1">
+      <button type="button" name="item-3-button" id="item-3-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-4"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">diy</h2>
+      <h3 class="price">5$</h3>
+      <p class="description">a nostalgic diy suprise box</p>
+      <label for="item-4-quantity">Quantity:</label>
+      <input type="text" name="item-4-quantity" id="item-4-quantity" value="1">
+      <button type="button" name="item-4-button" id="item-4-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-5"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">mikmak zoe dall</h2>
+      <h3 class="price">9$</h3>
+      <p class="description">A nostalgic mikmak zoe doll</p>
+      <label for="item-5-quantity">Quantity:</label>
+      <input type="text" name="item-5-quantity" id="item-5-quantity" value="1">
+      <button type="button" name="item-5-button" id="item-5-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-6"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">gum</h2>
+      <h3 class="price">$1.5</h3>
+      <p class="description">nostalgic gum</p>
+      <label for="item-6-quantity">Quantity:</label>
+      <input type="text" name="item-6-quantity" id="item-6-quantity" value="1">
+      <button type="button" name="item-6-button" id="item-6-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-7"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">crox</h2>
+      <h3 class="price">$12</h3>
+      <p class="description">nostalgic pink crox</p>
+      <label for="item-7-quantity">Quantity:</label>
+      <input type="text" name="item-7-quantity" id="item-7-quantity" value="1">
+      <button type="button" name="item-7-button" id="item-7-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-8"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">braclet</h2>
+      <h3 class="price">$1</h3>
+      <p class="description">A nostalgic braclet</p>
+      <label for="item-8-quantity">Quantity:</label>
+      <input type="text" name="item-8-quantity" id="item-8-quantity" value="1">
+      <button type="button" name="item-8-button" id="item-8-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-9"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">slime</h2>
+      <h3 class="price">$5</h3>
+      <p class="description">A nostalgic pink butter slime</p>
+      <label for="item-9-quantity">Quantity:</label>
+      <input type="text" name="item-9-quantity" id="item-9-quantity" value="1">
+      <button type="button" name="item-9-button" id="item-9-button">Add to Cart</button>
+    </div>
+  </div>
+  <div class="product">
+    <div class="image-box">
+      <div class="images" id="image-10"></div>
+    </div>
+    <div class="text-box">
+      <h2 class="item">deskonkey</h2>
+      <h3 class="price">$4.99</h3>
+      <p class="description">A nostalgic pink diskonkey</p>
+      <label for="item-10-quantity">Quantity:</label>
+      <input type="text" name="item-10-quantity" id="item-10-quantity" value="1">
+      <button type="button" name="item-10-button" id="item-10-button">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="cart-section">
+  
+  <div class="table-heading">
+    <h2 class="cart-product">Product</h2>
+    <h2 class="cart-price">Price</h2>
+    <h2 class="cart-quantity">Quantity</h2>
+    <h2 class="cart-total">Total</h2>
+  </div>  
+  
+  <div class="table-content">
+    <div class="cart-product">  
+      <div class="cart-image-box">
+        <div class="cart-images" id="image-10"></div>
+      </div>
+      <h2 class="cart-item">deskonkey</h2>
+      <p class="cart-description"></p>
+    </div>
+    <div class="cart-price">
+      <h3 class="price">4.99$</h3>
+    </div>
+    <div class="cart-quantity">
+      <input type="text" name="cart-1-quantity" id="cart-1-quantity" value="1">
+    </div>
+    <div class="cart-total">
+      <h3 class="price">$4.99</h3>
+      <button type="button" class="remove" name="remove-1" id="remove-1">x</button>
+    </div>
+  </div>
+  
+  <div class="table-content">
+    <div class="cart-product">  
+      <div class="cart-image-box">
+        <div class="cart-images" id="image-7"></div>
+      </div>
+      <h2 class="cart-item">crox</h2>
+      <p class="cart-description"></p>
+    </div>
+    <div class="cart-price">
+      <h3 class="price">12$</h3>
+    </div>
+    <div class="cart-quantity">
+      <input type="text" name="cart-1-quantity" id="cart-1-quantity" value="1">
+    </div>
+    <div class="cart-total">
+      <h3 class="price">$12$</h3>
+      <button type="button" class="remove" name="remove-2" id="remove-2">x</button>
+    </div>
+  </div>
+  
+  <div class="table-content">
+    <div class="cart-product">  
+      <div class="cart-image-box">
+        <div class="cart-images" id="image-3"></div>
+      </div>
+      <h2 class="cart-item">gomilum</h2>
+      <p class="cart-description">7$</p>
+    </div>
+    <div class="cart-price">
+      <h3 class="price">$7</h3>
+    </div>
+    <div class="cart-quantity">
+      <input type="text" name="cart-1-quantity" id="cart-1-quantity" value="1">
+    </div>
+    <div class="cart-total">
+      <h3 class="price">$4.99</h3>
+      <button type="button" class="remove" name="remove-3" id="remove-3">x</button>
+    </div>
+  </div>
+  
+  <div class="coupon">
+    <input type="text" name="coupon" id="coupon" placeholder="COUPON CODE">
+    <button type="button" name="coupon" id="coupon">Submit</button>  
+  </div>
+  
+  <div class="checkout">
+    <button type="button" name="update" id="update">Update</button>
+    <button type="button" name="checkout" id="checkout">Checkout</button>
+    <div class="final-cart-total">
+      <h3 class="price">$21.97</h3>
+    </div>
+  </div>
+  
+  <div class="keep-shopping">
+    <button type="button" name="keep-shopping" id="keep-shopping">Keep Shopping</button>  
+  </div>
+  
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial
+  , Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #F4DFEE;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #F4DFEE;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #F4DFEE;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+
+}
+}
+</body>
+</html>
